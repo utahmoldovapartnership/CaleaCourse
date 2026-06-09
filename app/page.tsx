@@ -95,7 +95,7 @@ export default function LandingPage() {
               practice — without the clutter.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <LinkButton href="/login" size="lg" variant="onBrand">
+              <LinkButton href="/register" size="lg" variant="onBrand">
                 Get started
               </LinkButton>
               <LinkButton href="/login" size="lg" variant="onAccentOutline">

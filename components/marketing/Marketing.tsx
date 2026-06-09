@@ -22,7 +22,7 @@ function SiteBrandLink({ onAccent = false }: { onAccent?: boolean }) {
 }
 
 export function SiteHeader({
-  ctaHref = "/login",
+  ctaHref = "/register",
   ctaLabel = "Get started",
 }: {
   ctaHref?: string;
@@ -78,7 +78,7 @@ export function SiteFooter() {
                   experience.
                 </p>
                 <div className="landing-cta-actions mt-8 flex flex-wrap items-center gap-3">
-                  <LinkButton href="/login" size="lg" className="landing-cta-btn-dark">
+                  <LinkButton href="/register" size="lg" className="landing-cta-btn-dark">
                     Get started
                   </LinkButton>
                   <LinkButton href="/register" size="lg" variant="onAccentOutline">
