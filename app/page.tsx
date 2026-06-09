@@ -1,65 +1,221 @@
 import Image from "next/image";
+import { SiteFooter, SiteHeader } from "@/components/marketing/Marketing";
+import { LinkButton } from "@/components/ui/Button";
+import type { PageTheme } from "@/lib/theme";
 
-export default function Home() {
+const features: {
+  title: string;
+  desc: string;
+  icon: string;
+  theme: PageTheme;
+}[] = [
+  {
+    title: "Build courses",
+    desc: "Create chapters and questions with a clean editor — organized and easy to update.",
+    icon: "/assets/illustrations/books.svg",
+    theme: "orange",
+  },
+  {
+    title: "Run classes",
+    desc: "Invite codes, rosters, and assignments in one place.",
+    icon: "/assets/illustrations/globe.svg",
+    theme: "blue",
+  },
+  {
+    title: "Track progress",
+    desc: "See how every student is doing at a glance.",
+    icon: "/assets/illustrations/student.svg",
+    theme: "green",
+  },
+];
+
+const audiences: {
+  title: string;
+  desc: string;
+  points: string[];
+  icon: string;
+  theme: PageTheme;
+}[] = [
+  {
+    title: "For teachers",
+    desc: "Set up courses, manage rosters, and see who needs help — all from one dashboard.",
+    points: [
+      "Build chapters and questions in a focused editor",
+      "Share invite codes to add students instantly",
+      "Track progress across every class you run",
+    ],
+    icon: "/assets/illustrations/teacher%202.svg",
+    theme: "orange",
+  },
+  {
+    title: "For students",
+    desc: "Join a class with a code and practice on your own time, with feedback that keeps you moving.",
+    points: [
+      "Join a class in seconds with an invite code",
+      "Work through questions at your own pace",
+      "Get clear feedback as you practice",
+    ],
+    icon: "/assets/illustrations/student%20materials.svg",
+    theme: "blue",
+  },
+];
+
+const steps = [
+  {
+    label: "01",
+    title: "Create a course",
+    desc: "Add chapters and practice questions in minutes.",
+  },
+  {
+    label: "02",
+    title: "Invite your class",
+    desc: "Share a code so students can join instantly.",
+  },
+  {
+    label: "03",
+    title: "Students practice",
+    desc: "They work through questions with clear, focused feedback.",
+  },
+];
+
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div className="landing-page flex min-h-screen flex-col bg-calea-off-white" data-theme="orange">
+      <SiteHeader />
+
+      <section className="landing-band on-accent">
+        <div className="page-wrap page-wrap--wide landing-hero">
+          <div className="landing-hero-copy">
+            <p className="landing-eyebrow-on-accent">Calea Courses</p>
+            <h1 className="font-display text-3xl font-extrabold tracking-tight lg:text-[2.875rem]">
+              Learning tools that stay out of your way
+            </h1>
+            <p className="on-accent-muted mt-5 text-base leading-relaxed lg:text-lg">
+              Build interactive courses, run your classes, and let students
+              practice — without the clutter.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <LinkButton href="/login" size="lg" variant="onBrand">
+                Get started
+              </LinkButton>
+              <LinkButton href="/login" size="lg" variant="onAccentOutline">
+                Sign in
+              </LinkButton>
+            </div>
+          </div>
+
+          <div className="landing-hero-art" aria-hidden="true">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/assets/illustrations/stacked%20books%20+%20cap.svg"
+              alt=""
+              width={520}
+              height={460}
+              priority
+              className="landing-hero-art-image"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
+      </section>
+
+      <section className="page-wrap page-wrap--wide landing-section">
+        <header className="landing-section-header">
+          <p className="eyebrow mb-4">Features</p>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight lg:text-3xl">
+            Three things Calea handles for you
+          </h2>
+          <p className="mt-3 max-w-2xl text-base text-calea-text-muted">
+            Everything you need to teach interactive material, in a workspace that
+            feels calm and clear.
+          </p>
+        </header>
+
+        <div className="landing-feature-grid">
+          {features.map((feature) => (
+            <article key={feature.title} className="landing-feature-card">
+              <div data-theme={feature.theme} className="landing-feature-art on-accent">
+                <Image
+                  src={feature.icon}
+                  alt=""
+                  width={200}
+                  height={200}
+                  className="landing-feature-art-image"
+                />
+              </div>
+              <div className="landing-feature-body">
+                <h3 className="font-display text-xl font-extrabold">{feature.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-calea-text-muted">
+                  {feature.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="landing-band on-accent" data-theme="pink">
+        <div className="page-wrap page-wrap--wide">
+          <header className="landing-section-header">
+            <p className="landing-eyebrow-on-accent mb-4">How it works</p>
+            <h2 className="font-display text-2xl font-extrabold tracking-tight lg:text-3xl">
+              From course to classroom in three steps
+            </h2>
+          </header>
+
+          <ol className="landing-steps">
+            {steps.map((step) => (
+              <li key={step.label} className="landing-step">
+                <span className="landing-step-index">{step.label}</span>
+                <div>
+                  <h3 className="font-display text-lg font-extrabold">{step.title}</h3>
+                  <p className="on-accent-muted mt-1.5 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section className="page-wrap page-wrap--wide landing-section">
+        <header className="landing-section-header">
+          <p className="eyebrow mb-4">For everyone</p>
+          <h2 className="font-display text-2xl font-extrabold tracking-tight lg:text-3xl">
+            One platform, two sides of the classroom
+          </h2>
+          <p className="mt-3 max-w-2xl text-base text-calea-text-muted">
+            Teachers stay organized. Students stay focused. Calea keeps both
+            experiences simple.
+          </p>
+        </header>
+
+        <div className="landing-audience-grid">
+          {audiences.map((audience) => (
+            <article key={audience.title} className="landing-audience-card">
+              <div data-theme={audience.theme} className="landing-audience-art on-accent">
+                <Image
+                  src={audience.icon}
+                  alt=""
+                  width={320}
+                  height={320}
+                  className="landing-audience-art-image"
+                />
+              </div>
+              <div className="landing-audience-body">
+                <h3 className="font-display text-xl font-extrabold">{audience.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-calea-text-muted">
+                  {audience.desc}
+                </p>
+                <ul className="landing-audience-list" data-theme={audience.theme}>
+                  {audience.points.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <SiteFooter />
     </div>
   );
 }
