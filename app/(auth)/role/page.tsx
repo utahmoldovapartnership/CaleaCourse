@@ -46,7 +46,7 @@ export default function RolePage() {
             <RoleOption
               selected={role === "teacher"}
               onSelect={() => setRoleChoice("teacher")}
-              icon="/assets/illustrations/teacher%201.svg"
+              icon="/assets/illustrations/teacher-1.svg"
               label="Teacher"
               hint="Create courses and manage classes"
             />

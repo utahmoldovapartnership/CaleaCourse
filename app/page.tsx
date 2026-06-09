@@ -44,7 +44,7 @@ const audiences: {
       "Share invite codes to add students instantly",
       "Track progress across every class you run",
     ],
-    icon: "/assets/illustrations/teacher%202.svg",
+    icon: "/assets/illustrations/teacher-2.svg",
     theme: "orange",
   },
   {
@@ -55,7 +55,7 @@ const audiences: {
       "Work through questions at your own pace",
       "Get clear feedback as you practice",
     ],
-    icon: "/assets/illustrations/student%20materials.svg",
+    icon: "/assets/illustrations/student-materials.svg",
     theme: "blue",
   },
 ];
@@ -106,7 +106,7 @@ export default function LandingPage() {
 
           <div className="landing-hero-art" aria-hidden="true">
             <Image
-              src="/assets/illustrations/stacked%20books%20+%20cap.svg"
+              src="/assets/illustrations/stacked-books-cap.svg"
               alt=""
               width={520}
               height={460}

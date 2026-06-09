@@ -69,7 +69,7 @@ export function QuizCompleteState({
         <div className="quiz-result-card surface-card">
           <Tag solid>Chapter complete</Tag>
           <Image
-            src="/assets/illustrations/stacked%20books%20+%20cap.svg"
+            src="/assets/illustrations/stacked-books-cap.svg"
             alt=""
             width={200}
             height={160}

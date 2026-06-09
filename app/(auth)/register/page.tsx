@@ -27,7 +27,7 @@ export default function RegisterPage() {
       title="Create your account"
       lead="Add your details, then choose teacher or student."
       headingId="register-heading"
-      illustration="/assets/illustrations/teacher%201.svg"
+      illustration="/assets/illustrations/teacher-1.svg"
       illustrationCopy="Build courses, manage classes, and track student progress."
       footer={
         <p className="auth-page-footer">

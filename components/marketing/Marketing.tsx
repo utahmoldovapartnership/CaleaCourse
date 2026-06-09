@@ -96,7 +96,7 @@ export function SiteFooter() {
                   className="landing-cta-art-image landing-cta-art-image--student"
                 />
                 <Image
-                  src="/assets/illustrations/teacher%201.svg"
+                  src="/assets/illustrations/teacher-1.svg"
                   alt=""
                   width={400}
                   height={400}
