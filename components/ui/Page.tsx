@@ -45,10 +45,10 @@ export function PageHeader({
   action?: ReactNode;
 }) {
   return (
-    <header className="mb-16 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between lg:mb-20">
-      <div className="max-w-3xl">
-        {eyebrow && <p className="eyebrow mb-4">{eyebrow}</p>}
-        <h1 className="font-display text-3xl font-extrabold tracking-tight lg:text-[2.75rem]">
+    <header className="mb-10 flex flex-col gap-5 sm:mb-16 sm:flex-row sm:items-end sm:justify-between sm:gap-6 lg:mb-20">
+      <div className="min-w-0 max-w-3xl">
+        {eyebrow && <p className="eyebrow mb-3 sm:mb-4">{eyebrow}</p>}
+        <h1 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[2.75rem]">
           {title}
         </h1>
         {description && (
@@ -57,7 +57,7 @@ export function PageHeader({
           </p>
         )}
       </div>
-      {action && <div className="shrink-0">{action}</div>}
+      {action && <div className="w-full shrink-0 sm:w-auto">{action}</div>}
     </header>
   );
 }
@@ -108,7 +108,7 @@ export function Panel({
 }) {
   return (
     <div
-      className={`p-8 lg:p-10 ${accent ? "on-accent" : "surface-card"} ${className}`}
+      className={`p-6 sm:p-8 lg:p-10 ${accent ? "on-accent" : "surface-card"} ${className}`}
     >
       {children}
     </div>
@@ -235,18 +235,11 @@ export function ListItem({
 
 export function StatInline({ items }: { items: { label: string; value: string }[] }) {
   return (
-    <dl className="surface-card flex flex-wrap gap-x-12 gap-y-6 p-6 lg:gap-x-16 lg:p-8">
-      {items.map((item, i) => (
-        <div
-          key={item.label}
-          className={i > 0 ? "border-l border-calea-border-light pl-12 lg:pl-16" : ""}
-        >
-          <dt className="text-xs font-extrabold uppercase tracking-widest text-calea-text-muted">
-            {item.label}
-          </dt>
-          <dd className="mt-1 font-display text-4xl font-extrabold tracking-tight text-calea-text">
-            {item.value}
-          </dd>
+    <dl className="stat-inline surface-card">
+      {items.map((item) => (
+        <div key={item.label} className="stat-inline-item">
+          <dt className="stat-inline-label">{item.label}</dt>
+          <dd className="stat-inline-value">{item.value}</dd>
         </div>
       ))}
     </dl>

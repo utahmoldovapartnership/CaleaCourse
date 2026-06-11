@@ -87,7 +87,7 @@ export default function LandingPage() {
         <div className="page-wrap page-wrap--wide landing-hero">
           <div className="landing-hero-copy">
             <p className="landing-eyebrow-on-accent">Calea Courses</p>
-            <h1 className="font-display text-3xl font-extrabold tracking-tight lg:text-[2.875rem]">
+            <h1 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[2.875rem]">
               Learning tools that stay out of your way
             </h1>
             <p className="on-accent-muted mt-5 text-base leading-relaxed lg:text-lg">

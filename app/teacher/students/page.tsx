@@ -82,7 +82,7 @@ export default function StudentsPage() {
               <li key={student.id}>
                 <Link
                   href={`/teacher/students/${student.id}`}
-                  className={`list-row text-calea-text no-underline hover:text-calea-text ${i % 2 === 1 ? "list-row--alt" : ""}`}
+                  className={`list-row list-row--with-stats text-calea-text no-underline hover:text-calea-text ${i % 2 === 1 ? "list-row--alt" : ""}`}
                 >
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--page-accent-subtle)] font-display text-sm font-extrabold accent-text">
                     {student.initials}
@@ -95,7 +95,7 @@ export default function StudentsPage() {
                       {student.className} · {student.lastActive}
                     </div>
                   </div>
-                  <div className="shrink-0 text-right">
+                  <div className="list-row-stats">
                     <div className="font-display text-xl font-extrabold">
                       {student.accuracy}%
                     </div>

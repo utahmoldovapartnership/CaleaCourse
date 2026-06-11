@@ -149,7 +149,7 @@ export function TeacherShell({ children }: { children: ReactNode }) {
           <ProfileMenu accentClass={TEACHER_PROFILE_ACCENT} />
         </header>
 
-        <main className="flex-1 pb-[5.5rem] lg:pb-[var(--page-py)]">
+        <main className="flex-1 pb-[calc(5.5rem+env(safe-area-inset-bottom,0px))] lg:pb-[var(--page-py)]">
           <AuthGuard role="teacher">{children}</AuthGuard>
         </main>
 

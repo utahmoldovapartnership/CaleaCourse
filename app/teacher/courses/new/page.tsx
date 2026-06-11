@@ -36,7 +36,7 @@ export default function NewCoursePage() {
         title="Create a course"
         description="Start with a name and description. Add chapters next."
         action={
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Button
               variant="primary"
               size="sm"

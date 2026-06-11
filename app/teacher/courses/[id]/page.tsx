@@ -185,7 +185,7 @@ export default function CourseEditorPage({
                   >
                     <div className="chapter-card-header">
                       {isRenaming ? (
-                        <div className="flex min-w-0 flex-1 items-center gap-2 px-3 py-2">
+                        <div className="chapter-rename-row">
                           <input
                             value={editingChapterTitle}
                             onChange={(e) => setEditingChapterTitle(e.target.value)}
@@ -386,7 +386,7 @@ export default function CourseEditorPage({
                               }))
                             }
                             placeholder="Type a question…"
-                            className="field-input field-input--compact min-w-[12rem] flex-1"
+                            className="field-input field-input--compact min-w-0 flex-1"
                             onKeyDown={(e) =>
                               e.key === "Enter" && handleAddQuestion(chapter.id)
                             }
@@ -412,7 +412,7 @@ export default function CourseEditorPage({
                 value={newChapterTitle}
                 onChange={(e) => setNewChapterTitle(e.target.value)}
                 placeholder="Chapter title…"
-                className="field-input field-input--compact min-w-[12rem] flex-1"
+                className="field-input field-input--compact min-w-0 flex-1"
                 onKeyDown={(e) => e.key === "Enter" && handleAddChapter()}
               />
               <Button size="sm" onClick={handleAddChapter} disabled={!newChapterTitle.trim()}>

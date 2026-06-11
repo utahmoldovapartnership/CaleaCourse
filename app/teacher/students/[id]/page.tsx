@@ -73,7 +73,7 @@ export default function StudentDetailPage({
         title={name || student.name}
         description="View and update roster details."
         action={
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Button size="sm" onClick={handleSave}>
               {saved ? "Saved" : "Save"}
             </Button>

@@ -1,6 +1,6 @@
 import { AppProvider } from "@/components/providers/AppProvider";
 import { Outfit } from "next/font/google";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   title: "Calea Courses",
   description: "Calea gets out of your way so learning can happen.",
   icons: { icon: "/assets/logos/logo-color.svg" },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

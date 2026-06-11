@@ -58,7 +58,7 @@ export function ProfileMenu({
 
     return (
       <div
-        className={`flex h-9 w-9 items-center justify-center rounded-full text-sm font-extrabold opacity-60 ${accentClass}`}
+        className={`profile-menu-trigger--icon opacity-60 ${accentClass}`}
         aria-hidden
       >
         ·
@@ -82,7 +82,7 @@ export function ProfileMenu({
         className={
           variant === "sidebar"
             ? "profile-menu-trigger profile-menu-trigger--sidebar"
-            : `profile-menu-trigger flex h-9 w-9 items-center justify-center rounded-full text-sm font-extrabold ${accentClass}`
+            : `profile-menu-trigger profile-menu-trigger--icon ${accentClass}`
         }
         aria-expanded={open}
         aria-haspopup="menu"

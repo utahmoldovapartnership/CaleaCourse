@@ -13,9 +13,10 @@ function SiteBrandLink({ onAccent = false }: { onAccent?: boolean }) {
         height={32}
       />
       <span
-        className={`font-display text-lg font-extrabold ${onAccent ? "" : "text-calea-text"}`}
+        className={`font-display text-base font-extrabold sm:text-lg ${onAccent ? "" : "text-calea-text"}`}
       >
-        Calea Courses
+        <span className="landing-brand-text--short">Calea</span>
+        <span className="landing-brand-text--long">Calea Courses</span>
       </span>
     </Link>
   );
@@ -31,10 +32,10 @@ export function SiteHeader({
   return (
     <header className="landing-site-header on-accent">
       <div className="page-wrap page-wrap--wide">
-        <div className="flex h-[var(--topbar-height)] items-center justify-between gap-4">
+        <div className="landing-site-header-inner">
           <SiteBrandLink onAccent />
 
-          <div className="ml-auto flex items-center gap-3">
+          <div className="landing-site-header-actions">
             <LinkButton href="/login" variant="onAccentOutline" size="sm">
               Sign in
             </LinkButton>
@@ -70,7 +71,7 @@ export function SiteFooter() {
           <div className="landing-cta-panel on-accent" data-theme="yellow">
             <div className="landing-cta-inner">
               <div className="landing-cta-copy">
-                <h2 className="font-display text-3xl font-extrabold tracking-tight lg:text-[2.5rem]">
+                <h2 className="font-display text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[2.5rem]">
                   Ready to get started?
                 </h2>
                 <p className="on-accent-muted mt-4 max-w-md text-base leading-relaxed lg:text-lg">
